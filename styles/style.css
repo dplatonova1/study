@@ -1,0 +1,596 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page {
+  min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a:hover {
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+/*блок header*/
+
+.header {
+  display: flex;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* выше установили ограничения для секции */
+  position: relative;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.description {
+  display: flex;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  align-items: flex-start;
+}
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  background-color: #2f80ed;
+  z-index: 1;
+  transform: rotate(-15deg);
+  animation: rotate 20s infinite linear;
+}
+
+.header__subtitle {
+  width: 388px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  line-height: 25px;
+  font-size: 18px;
+  z-index: 3;
+}
+
+.header__title {
+  align-self: center;
+  width: 730px;
+  margin-left: 64px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.logo {
+  z-index: 99;
+  top: 30px;
+  left: 64px;
+}
+
+.logo_place_header {
+  height: 32px;
+  width: 183px;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  margin-top: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*блок digits*/
+.digits {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+
+.section-title {
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto auto 0 auto;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 20px auto auto auto;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 1100px;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.table__cell {
+  width: 250px;
+  margin: 60px auto auto auto;
+}
+
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  margin: 20px auto auto auto;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*блок feinman*/
+
+.feinman {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 80px;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 790px;
+}
+
+.feinman__illustration {
+  position: absolute;
+  width: 867px;
+  height: 637px;
+  bottom: 0;
+  left: 0;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.feinman__title {
+  width: 648px;
+  z-index: 2;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.feinman__subtitle {
+  margin-top: 70px;
+  z-index: 2;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.feinman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  align-self: flex-end;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+
+/*блок kaufman*/
+
+.kaufman {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  align-items: center;
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 1;
+  animation: rotate 20s infinite linear;
+}
+
+.section-title_theme_dark {
+  width: 60%;
+  line-height: 69px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto auto 0 auto;
+  color: white;
+  z-index: 2;
+}
+
+.section-subtitle_theme_dark {
+  width: 60%;
+  margin: 20px auto auto auto;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.table_theme_dark {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 1100px;
+  align-self: center;
+  justify-content: space-between;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 2;
+}
+
+.table__heading_theme_dark {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text_theme_dark {
+  margin: 20px auto auto auto;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*блок footer*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 40px 0;
+  background-color: #1f1f1f;
+  color: white;
+  align-items: flex-start;
+  position: relative;
+}
+
+.footer__columns {
+  min-height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer__column_content-copyright {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 711px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.logo_place_footer {
+  height: 35px;
+  width: 185px;
+  background-image: url(../images/logo_white.svg);
+  background-repeat: no-repeat;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  padding: 18px 0;
+}
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.footer__column_content-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.footer__column_content-social {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin: 5px 10px 0 0;
+}
+
+.footer__column-link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px 0 16px 0;
+}
+
+/* блок technics */
+
+.technics {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto auto auto;
+  align-items: center;
+  width:80%;
+
+}
+
+/* Здесь, боюсь, я не совсем поняла задание - нужен грид или флекс. 
+ Ввиду того, что урок по гридам, как я поняла из лекции Саши Палтуха, 
+ ещё в процессе, получается, что гриды мы ещё как бы не проходили. 
+ Поэтому нужен флекс. Но в гриде секция выглядит логичнее.
+ На всякий случай оставляю оба решения.
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+} */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-column-gap: 100px;
+  grid-row-gap: 60px;
+  margin: 60px auto auto auto;
+  width: 80%;
+  justify-content: center;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: auto 40px 43px 40px;
+}
+
+.cards__item {
+  text-align: center;
+}
+
+.cards__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards__description {
+  padding: 16px 0 0 0;
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*блок video*/
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 60px;
+}
+
+.video__iframes {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.video__iframe {
+  padding-left: 20px;
+  width: 515px;
+  height: 316px;
+  border: 0;
+}
+
+/*блок oakley*/
+
+.oakley {
+  padding-top: 160px;
+  background-color: #f2f2f2;
+}
+
+/*блок khan*/
+.khan {
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  width: 80%;
+  padding-top: 105px;
+  margin: 0 auto;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.khan__quote {
+  width: 790px;
+  margin: 50px 0 36px 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 0 0 10px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.khan__quote-author-subline {
+  margin: 0 0 68px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.khan__book-pic {
+  margin: 0 20px 0 0;
+  width: 608px;
+  height: 620px;
+  object-fit: cover;
+  object-position: right top;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* блок resources */
+
+.resources{
+  margin-top:100px;
+  margin-bottom: 217px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resources__logo-zone{
+  display:flex;
+  flex-direction: row;
+  width: 1100px;
+  margin:80px auto 0 auto;
+}
+
+.resources__logo{
+  width:270px;
+  height: 38px;
+}
